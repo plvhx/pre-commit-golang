@@ -1,9 +1,12 @@
 #! /bin/env bash
 
-msg=`git log --format=%B -n 1`
+input_file=$1
+start_line=`head -n1 $input_line`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
-if [[ $msg =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
+echo $start_line
+
+if [[ $start_line =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
 	echo -e "\e[32mCurrent commit message were matched.\e[0m"
 	exit 0
 fi
