@@ -4,10 +4,10 @@ input_file=$1
 start_line=`cat ${input_file} | head -n 1`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
-passed=true
+passed=false
 
 if [[ $start_line =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
-	passed=false
+	passed=true
 fi
 
 if [ $passed = "false" ]; then
