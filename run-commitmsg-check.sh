@@ -1,10 +1,10 @@
 #! /bin/env bash
 
-input_file=".git/COMMIT_EDITMSG"
+input_file=$1
 start_line=`head -n1 $input_line`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
-echo $start_line
+echo -e $start_line
 
 if [[ $start_line =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
 	echo -e "\e[32mCurrent commit message were matched.\e[0m"
