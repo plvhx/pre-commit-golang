@@ -10,7 +10,7 @@ if [[ $start_line =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
 	passed=false
 fi
 
-if [ $pass = "false" ]; then
+if [ $passed = "false" ]; then
 	echo -e "\e[31m----------------------- Invalid commit message -----------------------\e[0m"
 	echo -e "commit message: \e[31m${start_line}\e[0m"
 	echo -e "correct format: \e[33m<type>(<scope>): <subject>\e[0m\n"
