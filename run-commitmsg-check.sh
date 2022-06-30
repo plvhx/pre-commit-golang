@@ -4,7 +4,7 @@ input_file=$1
 start_line=`head -n1 ${input_line}`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
-echo -e "file: ${1}"
+echo -e "line: ${start_line}"
 
 if [[ $start_line =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
 	echo -e "\e[32mCurrent commit message were matched.\e[0m"
