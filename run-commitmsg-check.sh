@@ -12,7 +12,7 @@ if [[ $start_line =~ (${type})(\(.*\))(\!)?(\: )(.*) ]]; then
 fi
 
 echo -e "\e[31m----------------------- Invalid commit message -----------------------\e[0m"
-echo -e "commit message: \e[31m${msg}\e[0m"
+echo -e "commit message: \e[31m${start_line}\e[0m"
 echo -e "correct format: \e[33m<type>(<scope>): <subject>\e[0m\n"
 echo -e "Allowed type values:"
 echo -e "\e[35mfeat:\e[0m         for a new feature for the user, not a few feature for build script."
