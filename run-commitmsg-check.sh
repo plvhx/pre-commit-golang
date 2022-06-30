@@ -1,7 +1,7 @@
 #! /bin/env bash
 
 input_file=$1
-start_line=`head -n1 $input_line`
+start_line=`head -n1 ${input_line}`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
 echo -e "file: ${1}"
