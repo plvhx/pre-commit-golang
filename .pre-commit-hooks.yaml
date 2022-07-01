@@ -59,9 +59,3 @@
   entry: run-commitmsg-check.sh
   language: 'script'
   description: "Validate recently git commit message against commit format provided by git karma http://karma-runner.github.io/6.3/dev/git-commit-msg.html"
-
-- id: install-commit-msg-hooks
-  name: 'install-commit-msg-hooks'
-  entry: run-install-commit-msg-hooks.sh
-  language: 'script'
-  description: "Install commit-msg hooks."
