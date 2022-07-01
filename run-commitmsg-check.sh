@@ -5,6 +5,7 @@ start_line=`cat ${input_file} | head -n 1`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
 echo "$input_file"
+echo "$start_line"
 
 passed=false
 
