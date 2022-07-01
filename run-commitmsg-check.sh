@@ -1,6 +1,6 @@
 #! /bin/env bash
 
-input_file=$1
+input_file=".git/COMMIT_EDITMSG"
 start_line=`cat ${input_file} | head -n 1`
 type="feat|fix|perf|docs|style|refactor|test|build|defect"
 
